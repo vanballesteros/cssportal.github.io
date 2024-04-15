@@ -1,0 +1,797 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+.main{
+    margin: 0;
+    width: 100%;
+    height:100vh;
+    background: linear-gradient(0deg, rgba(6,4,52,1) 0%, rgba(9,9,121,1) 46%, rgb(32, 52, 117) 100%); ;
+    position: relative;
+    z-index: 3;
+}
+.home-bg-yellow{
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: #d9c80d;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+.home-bg-pic{
+    z-index: -1;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    clip-path: polygon(100% 0, 0 100%, 0 0);
+}
+.homePage{
+    width: 100%;
+
+}
+.home-title{
+    padding-top: 20px;
+    padding-left: 20px;
+    font-family: Arial;
+    color: white;
+    font-weight: bold;
+    font-size: 5em ;
+    max-width: 600px;
+    overflow-wrap: break-word;
+}
+.home-logo{
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.home-logo img{
+    top: 15%;
+    position: absolute;
+    width: 410px;
+    height: 410px ;
+}
+.con-home-info{
+    width: 100%; 
+    display: flex; 
+    justify-content: end;
+}
+.home-info{
+    top: 84%;
+    position: absolute;
+    font-size: 1.8em;
+    color: #112d4e;
+    text-align: center;
+    margin-right: 10px;
+    width: 750px;
+    border-bottom: 3px solid #112d4e;
+    padding: 5px 0px;
+    border-top: 3px solid #112d4e;
+}
+
+.mediaPage{
+    width: 100%;
+
+}
+.linkPage{
+    width: 100%;
+
+}
+.coursePage{
+    width: 100%;
+
+}
+.aboutPage{
+    width: 100%;
+
+}
+.lock{
+    background-color: transparent;
+    position: absolute;
+    top: 52%;
+    left: 12%;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+.lock:hover{
+  background-color: #112d4e;
+}
+.formPage{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    
+}
+
+/* practice button for entering the system since the login is not working yet */
+.log{
+    position: absolute;
+   bottom: 30px;
+   background-color: #112d4e;
+   color: white;
+   padding: 5px;
+   cursor: pointer;
+}
+.welcome{
+    color: white;
+    font-size: 1.7em;
+    margin-bottom: 10px;
+    font-family: Arial;
+    font-weight: bold;
+}
+.con-student{
+    opacity: 0;
+    top: 54px;
+    text-align: center;
+    width: 400px;
+    position: absolute;
+    font-size: 22px;
+    font-family: Arial;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+}
+.newStudent{
+    color: #112d4e;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.oldStudent{
+    color: #112d4e;
+    background-color: #ffbe4f;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.signPage{
+    display: none;
+    opacity: 0;
+    align-self: center;
+    top: 100px;
+    text-align: center;
+    width: 400px;
+    position: absolute;
+    /* animation: showForm 1s ease forwards; */
+}
+.loginPage{
+    display: none;
+    opacity: 0;
+    align-self: center;
+    top: 100px;
+    text-align: center;
+    width: 400px;
+    position: absolute;
+}
+.signPage form, .loginPage form{
+    background-color: #ffbe4f;
+    padding: 30px 15px 15px 15px;
+    margin: 0 auto;
+}
+.signPage form input, .loginPage form input{
+    width: 300px;
+   padding: 10px;
+   margin: 0 auto;
+   margin-bottom: 15px;
+}
+.sub{
+    background-color: #112d4e;
+    color: white;
+    width: 320px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: none;
+}
+.headSign{
+    background-color:white;
+    color: #112d4e;
+    padding: 7%;
+
+}
+.headSign .titleBig{
+    font-size: 1.3em;
+    font-family: Arial;
+    color: #112d4e;
+    margin-bottom: 5px;
+
+}
+.headSign .titleSmall{
+    font-size: .8em;
+    font-family: Arial;
+    color: #112d4e;
+
+
+}
+.model{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+}
+.md-man{
+    z-index: -1;
+    opacity: 0;
+    padding-left: 20px;
+    width: 450px;
+    height: 560px;
+    display: none;
+}
+.md-woman{
+    opacity: 0;
+    padding-right: 15px;
+    width: 470px;
+    height: 500px;
+    padding-top: 60px;
+    display: none;
+
+}
+
+
+.sideBar{
+    z-index:2 ;
+    display: none;
+    opacity: 0;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+.con-sideBar{
+    width: 300px;
+    background: linear-gradient(0deg, rgba(15,14,28,1) 0%, rgba(49,69,180,0.8071603641456583) 87%);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+}
+
+.sideBar ul{
+    width: 300px;
+    display: grid;
+    place-items: center;
+    height: 65vh;
+
+
+}
+
+.sideBar ul li {
+    background-color: #112d4e;
+    color: white;
+    font-family: Arial;
+    padding: 10px 20px;
+    border: 3px solid #f6f604;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+}
+.sideBar ul a{
+    text-decoration: none;
+}
+.sideBar ul li:hover{
+    background-color: #d9c80d;
+}
+
+.portal-con{
+    display: none;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(241,236,61,0.8939950980392157) 7%, rgba(147,130,20,0.8575805322128851) 90%);
+    margin-right: -30px;
+    height: 170px;
+    text-align: end;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 200px;
+
+}
+.portal-title{
+    opacity: 0;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    font-family: Arial;
+    font-size: 4em;
+    font-weight: bold;
+    line-break: auto;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -50%);
+}
+
+.portal-logo{
+    display: none;
+    opacity: 0;
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    left:24%;
+    width: 350px;
+    height: 350px;
+    padding: auto;
+}
+.con-profile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #d9c80d;
+    width: 298px;
+    padding: 10px 1px;
+}
+
+.profile-name{
+    font-size: 1.3em;
+    font-family: Arial;
+    color: white;
+    text-decoration: none;
+
+
+}
+.profile-pic{
+    width: 50px;
+    height: 50px;
+
+}
+
+.search-con{
+    display: flex;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+.search-input{
+
+    padding: 10px 20px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border: none;
+    
+
+}
+.search-icon{
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border: none;
+}
+.search-icon:hover{
+    background-color: #d9c80d;
+
+}
+/* animation for opening slide */
+@keyframes slideOpenRight {
+    from{ transform: translateX(0) translateY(0);}
+    to{ transform: translateX(1390px) translateY(0);}      
+}
+@keyframes slideOpenLeft {
+    from{ transform: translateX(0) translateY(0);}
+    to{ transform: translateX(-1390px) translateY(0);}      
+}
+@keyframes slideOpenUp {
+    from{ transform: translateX(0) translateY(0);}
+    to{ transform: translateX(0) translateY(-1390px);}      
+}
+@keyframes slideOpenDown {
+    from{ transform: translateX(0) translateY(0); height: 100%; }
+    to{ transform: translateX(0) translateY(1390px); height: 0px;}      
+}
+/* animation for opening up down */
+@keyframes upDownOpen {
+    from{
+
+    }
+    to{
+        
+    }
+        
+}
+@keyframes show {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+@keyframes showSideBar {
+    from{
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes showForm {
+    0%{
+        opacity: 0;
+        transform: translateX(0) translateY(-1390px);
+    } 
+    70% {opacity: 0.8; }
+    100%{
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+@keyframes smaLogo {
+    0%{
+
+        width: 150px;
+        height: 150px ;
+    } 
+    100%{
+        top: 0px;
+        width: 70px;
+        height: 70px ;
+    }
+    
+}
+@keyframes sideBarDown {
+    from{
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (max-width: 452px) {
+    
+    .homePage{
+        text-align: center;
+    }
+    .home-title{
+        color: red;
+        font-size: 2em ;
+        max-width: 350px;
+        padding-top: 230px;
+        padding-left: initial;
+        margin: 0 auto;
+    }
+    .home-logo img{
+        top: 10%;
+        width: 150px;
+        height: 150px ;
+    }
+    .home-bg-yellow{
+        clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+    }
+
+    .home-bg-pic{
+        left: 0px;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    }
+    .lock{
+        top: 62%;
+        left: 37%;
+    }
+    .con-home-info{
+        display: flex; 
+        justify-content: center;
+    }
+    .home-info{
+        top: 88%;
+        font-size: 1em;
+        margin: 0 auto;
+        width: 560px;
+        border-bottom: 2px solid #112d4e;
+        border-top: 2px solid #112d4e;
+    }
+    .sideBar ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 100px;
+    }
+
+    .sideBar ul li {
+        font-size: .5em;
+        padding: 5px 5px;
+        width: 70px;
+        margin-bottom: 20px;
+    }
+    .portal-con{
+        margin-right: -30px;
+        text-align: end;
+        width: 100%;
+        height: 270px;
+    
+    }
+    .portal-title{
+        margin-top: 60px;
+        font-size: 3em;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+        .portal-logo {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -90%);
+            width: 180px;
+            height: 180px;
+    
+        }
+        .con-sideBar{
+            background: transparent;
+            width: 100%;
+            height: 190px;
+            display: grid;
+            place-items: center;
+        
+        }
+        .profile-name{
+            display: none;
+        }
+        .profile-pic{
+            width: 30px;
+            height: 30px;
+        }
+        .con-profile{
+            margin: 5px 5px;
+            width: 48px;
+        }
+        .search-con{
+            top: 10px;
+            right: 70px;
+        }
+    }
+
+
+@media (min-width:453px) and (max-width: 601px) {
+    .homePage{
+        text-align: center;
+    
+    }
+    .home-title{
+        z-index: 1;
+        color: green;
+        font-size: 3em ;
+        padding-top: 48%;
+        padding-left: initial;
+        margin: 0 auto;
+        max-width: 400px;
+        text-align: center;
+    }
+    .home-logo img{
+        top: 9%;
+        width: 180px;
+        height: 180px ;
+    }
+    .home-bg-yellow{
+        clip-path: polygon(50% 80%, 100% 0, 100% 100%, 0 100%, 0 0);
+    }
+    .home-bg-pic{
+        z-index: -2;
+        left: 0px;
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 0 80%);
+    }
+    .con-home-info{
+        display: flex; 
+        justify-content: center;
+    }
+    .home-info{
+        top: 88%;
+        font-size: 1.1em;
+        margin: 0 auto;
+        width: 560px;
+        border-bottom: 2px solid #112d4e;
+        border-top: 2px solid #112d4e;
+    }
+    .lock{
+        top: 62%;
+        left: 37%;
+    }
+    .sideBar ul {
+        width: 160px;
+        display: grid;
+        place-items: center;
+        height: 60vh;
+    }
+
+    .sideBar ul li {
+        font-size: .7em;
+        padding: 5px 10px;
+        width: 120px;
+        margin-bottom: 30px;
+    }
+    .portal-title{
+        margin-top: 60px;
+        font-size: 1.5em;
+    }
+    .portal-logo{
+        top: 50%;
+        left: 50%;
+        transform: translate(10%, -70%);
+        width: 180px;
+        height: 180px;
+    }
+    .con-sideBar{
+        width: 170px;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    
+    }
+    .profile-name{
+        font-size: 1em;
+        font-family: Arial;
+        color: white;
+        text-decoration: none;
+    }
+    .profile-pic{
+        width: 30px;
+        height: 30px;
+    }
+    .con-profile{
+        width: 168px;
+    }
+    
+}
+@media (min-width:602px) and (max-width: 768px) {
+    .homePage{
+        text-align: center;
+    
+    }
+    .home-title{
+        margin: 0 auto;
+        padding-left: initial;
+        color: yellow;
+        padding-top: 40px;
+        font-size: 3.4em ;
+        max-width: 600px;
+    }
+    .con-home-info{
+        width: 100%; 
+        display: flex; 
+        justify-content: center;
+    }
+    .home-info{
+        top: 84%;
+        font-size: 1.3em;
+        margin: 0 auto;
+        width: 560px;
+        border-bottom: 2px solid #112d4e;
+        border-top: 2px solid #112d4e;
+    }
+    
+    .lock{
+        top: 62%;
+        left: 41%;
+    }
+    .home-logo img{
+        top: 22%;
+        width: 290px;
+        height: 290px ;
+    }
+    .home-bg-yellow{
+        clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%);
+    }
+    .home-bg-pic{
+        left: 0px;
+        clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+    }
+    .sideBar ul {
+        width: 160px;
+        display: grid;
+        place-items: center;
+        height: 60vh;
+    }
+
+    .sideBar ul li {
+        font-size: .7em;
+        padding: 5px 10px;
+        width: 120px;
+        margin-bottom: 30px;
+    }
+    .portal-title{
+        font-size: 2em;
+    }
+    .portal-logo{
+        top: 50%;
+        left: 50%;
+        transform: translate(-90%, -50%);
+        width: 200px;
+        height: 200px;
+    }
+    .con-sideBar{
+        width: 170px;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    
+    }
+    .profile-name{
+        font-size: 1em;
+        font-family: Arial;
+        color: white;
+        text-decoration: none;
+    
+    
+    }
+    .profile-pic{
+        width: 40px;
+        height: 40px;
+    }
+    .con-profile{
+        width: 168px;
+    }
+  
+    
+}
+@media (min-width:769px) and (max-width: 1025px) {
+    .home-title {
+        color: rgb(255, 0, 212);
+        font-size: 4.2em;
+    }
+
+    .home-logo img {
+        top: 15%;
+        width: 310px;
+        height: 310px;
+    }
+
+    .sideBar ul {
+        width: 200px;
+        display: grid;
+        place-items: center;
+        height: 60vh;
+    }
+
+    .sideBar ul li {
+        padding: 10px 10px;
+        width: 160px;
+        margin-bottom: 30px;
+    }
+    .portal-title{
+        font-size: 3em;
+    }
+    .portal-logo{
+        top: 158px;
+        width: 300px;
+        height: 300px;
+    }
+    .con-sideBar{
+        width: 220px;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    
+    }
+    .con-profile{
+        width: 218px;
+    }
+}
+
+

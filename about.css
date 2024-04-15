@@ -1,0 +1,455 @@
+*{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.whole{
+    width: 100%;
+    height:100vh;
+    display: flex;
+}
+
+.bar{
+    flex: 2.5;
+    height: 100vh;
+    background-color: #112d4e;
+}
+
+.platform{
+    flex: 7.5;
+    height:100vh;
+    background-size: cover;
+    background: url(/assets/homebg.jpg);
+}
+.con-sideBar{
+    background: linear-gradient(0deg, rgb(18, 15, 58) 0%, rgba(3, 20, 112, 0.807) 87%);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+}
+
+.bar ul{
+    flex: 2;
+    display: grid;
+    place-items: center;
+    height: 65vh;
+
+
+}
+
+.bar ul li {
+    background-color: #112d4e;
+    color: white;
+    font-family: Arial;
+    padding: 10px 20px;
+    border: 3px solid #f6f604;
+    width: 200px;
+    text-align: center;
+    font-weight: bold;
+}
+.bar ul a{
+    text-decoration: none;
+}
+.bar ul li:hover{
+    background-color: #d9c80d;
+}
+
+
+.portal-logo{
+    z-index: 1;
+    position: absolute;
+    top: 150px;
+    left:24%;
+    width: 350px;
+    height: 350px;
+    padding: auto;
+    animation: moveLogo 1s ease 0.2s forwards;
+}
+.con-profile{  
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid #d9c80d;
+    padding: 10px 20px;
+    background-color: #d9c80d;
+    position: absolute;
+    top: 0px;
+}
+
+.profile-name{
+    padding-left: 3px;
+    font-size: 1.3em;
+    font-family: Arial;
+    color: white;
+    text-decoration: none;
+}
+.profile-pic{
+    width: 50px;
+    height: 50px;
+}
+
+.search-con{
+    z-index: 1;
+    display: flex;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+}
+.search-input{
+
+    padding: 10px 20px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 0px;
+    border: none;
+    
+
+}
+.search-icon{
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 10px;
+    border: none;
+}
+.search-icon:hover{
+    background-color: #d9c80d;
+
+}
+.box-info{
+    position: relative;
+    display: inline-block;
+}
+
+.box-hr{
+    max-height: 750px;
+    width: 900px;
+    max-width: 90%;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+}
+.info-title{
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+.info-details{
+    color: white;
+    font-family: Arial;
+    font-size: 2em;
+    position: absolute;
+    top: 70px;
+    margin: auto 13%;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.con-box{
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: show 1.3s ease forwards;
+}
+
+
+.con-space{
+    width: 100%;
+    height: 180px;
+}
+
+.platform-title{
+    z-index: 1;
+    color: white;
+    font-weight: bold;
+   font-size: 3em;
+    text-align: center;
+    position:absolute;
+    top: 30px;
+    left: 50%;
+    animation: show 1.3s ease forwards;
+}
+
+@keyframes moveLogo {
+    from{ 
+        transform: translateX(0) translateY(0) scale(1); 
+    }
+    to{ 
+        transform: translateX(-100px) translateY(-260px) scale(0.4);
+    }
+    
+}
+/* animation for opening slide */
+@keyframes slideOpenRight {
+    from{ transform: translateX(0) translateY(0);}
+    to{ transform: translateX(1390px) translateY(0);}      
+}
+@keyframes slideOpenLeft {
+    from{ transform: translateX(0) translateY(0);}
+    to{ transform: translateX(-1390px) translateY(0);}      
+}
+@keyframes slideOpenUp {
+    from{ transform: translateX(0) translateY(0);}
+    to{ transform: translateX(0) translateY(-1390px);}      
+}
+@keyframes slideOpenDown {
+    from{ transform: translateX(0) translateY(0); height: 100%; }
+    to{ transform: translateX(0) translateY(1390px); height: 0px;}      
+}
+/* animation for opening up down */
+@keyframes upDownOpen {
+    from{
+
+    }
+    to{
+        
+    }
+        
+}
+@keyframes show {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    
+}
+@keyframes showSideBar {
+    from{
+        opacity: 0;
+        transform: translateX(-300px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    
+}
+
+@keyframes showForm {
+    0%{
+        opacity: 0;
+        transform: translateX(0) translateY(-1390px);
+    } 
+    70% {opacity: 0.8; }
+    100%{
+        opacity: 1;
+        transform: translateX(0) translateY(0);
+    }
+}
+@keyframes smaLogo {
+    0%{
+
+        width: 150px;
+        height: 150px ;
+    } 
+    100%{
+        top: 0px;
+        width: 70px;
+        height: 70px ;
+    }
+    
+}
+@keyframes sideBarDown {
+    from{
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@media (max-width: 452px) {
+    .profile-pic{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 34px;
+        right: 10px;
+    
+    }
+    .search-con{
+        right: 70px;
+    }
+    .bar ul li {
+        background-color: #112d4e;
+        color: white;
+        font-family: Arial;
+        padding: 10px 10px;
+        border: 3px solid #f6f604;
+        width: 78px;
+        text-align: center;
+        font-weight: bold;
+        font-size: .6em;
+    }
+    .profile-name{
+        display: none;
+    }
+    .portal-logo{
+        top: 150px;
+        left:0;
+        margin-left: -20px;
+        padding: 0;
+    }
+    .con-profile{
+        border: initial;
+        padding: 10px 20px;
+        background-color: initial;
+        position: initial;
+    }
+    .profile-name{
+       display: none;
+    }
+    .profile-pic{
+        width: 50px;
+        height: 50px;
+    
+    }
+  
+    .platform-title{
+        font-size: 2em;
+        top: 90px;
+        width: 75%;
+        left: initial;
+    }
+    .info-details{
+        font-size: 1.2em;
+        top: 20px;
+        margin-bottom: 10px;
+    }
+    .box-hr{
+        height: 530px;
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+    }
+   
+   
+}
+
+
+@media (min-width:453px) and (max-width: 601px) {
+    .profile-name{
+        display: none;
+    }
+    .profile-pic{
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 34px;
+        right: 10px;
+    
+    }
+    .search-con{
+        right: 90px;
+    }
+    .bar ul li {
+        padding: 10px 10px;
+        width: 78px;
+        font-size: .6em;
+    }
+    .portal-logo{
+        top: 150px;
+        left:0;
+        margin-left: -20px;
+        padding: 0;
+    }
+    .con-profile{
+        border: initial;
+        padding: 10px 20px;
+        background-color: initial;
+        position: initial;
+    }
+    .profile-name{
+       display: none;
+    }
+    .profile-pic{
+        width: 50px;
+        height: 50px;
+    
+    }
+   
+    .platform-title{
+        font-size: 2em;
+        top: 90px;
+        width: 75%;
+        left: initial;
+    }
+    .info-details{
+        font-size: 1.3em;
+        top: 20px;
+        margin-bottom: 10px;
+    }
+    .box-hr{
+        max-height: 600px;
+    }
+ 
+   
+}
+@media (min-width:602px) and (max-width: 768px) {
+    .profile-name{
+        font-size: 1em;
+    }
+    .bar ul li {
+        width: 100px;
+        font-size: .7em;
+    }
+    .con-profile{
+        border: 3px solid #d9c80d;
+        padding: 5px 10px;
+    }
+    .profile-name{
+        font-size: 1em;
+    }
+  
+    .platform-title{
+        font-size: 2em;
+        top: 90px;
+        width: 75%;
+        left: initial;
+    }
+    .info-details{
+        font-size: 1.4em;
+        top: 60px;
+        margin-bottom: 20px;
+    }
+    .box-hr{
+    max-height: 600px;
+}
+   
+    
+}
+@media (min-width:769px) and (max-width: 1025px) {
+    .bar ul li {
+        width: 145px;
+    }
+   
+    .platform-title{
+        font-size: 2.3em;
+        top: 36px;
+        width: 75%;
+        left: 16%;
+    }
+    .info-details{
+        font-size: 1.9em;
+        top: 53px;
+    }
+   
+
+  
+}
+
+
